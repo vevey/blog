@@ -1,1 +1,154 @@
-<h1>This is a test</h1>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog Vevey.ch</title>
+  </head>
+  <body>
+    <style>
+    body {
+    	margin: 0;
+    	overflow: hidden;
+    	font-family: 'Inconsolata', monospace;
+    	color: hsla(210, 60%, 30%, .9);
+    	border-sizing: border-box;
+    }
+    div {
+    	border-sizing: border-box;
+    }
+    .wrapper {
+    	position: relative;
+    	width: 100vw;
+    	height: 100vh;
+    }    
+    .sensor {
+    	position: absolute;
+    	z-index: 1;
+    	top: 1vh;
+    	left: 0;
+    	bottom: 0vh;
+    	width: 9.1vw;
+    	transition: .25s linear;
+    }
+
+    @keyframes wait {
+    	0% {
+    		cursor: wait;
+    	}
+    	99% {
+    		cursor: wait;
+    	}
+    	100% {
+    		cursor: default;
+    	}
+    }
+
+    .sensor:hover {
+    	animation: wait .9s linear forwards;
+    }
+    .sensor:nth-of-type(1) {
+    	left: 0;
+    }
+    .sensor:nth-of-type(2) {
+    	left: 9.1vw;
+    }
+    .sensor:nth-of-type(3) {
+    	left: 18.2vw;
+    }
+    .sensor:nth-of-type(4) {
+    	left: 27.3vw;
+    }
+    .sensor:nth-of-type(5) {
+    	left: 36.4vw;
+    }
+    .sensor:nth-of-type(6) {
+    	left: 45.5vw;
+    }
+    .sensor:nth-of-type(7) {
+    	left: 54.6vw;
+    }
+    .sensor:nth-of-type(8) {
+    	left: 63.7vw;
+    }
+    .sensor:nth-of-type(9) {
+    	left: 72.8vw;
+    }
+    .sensor:nth-of-type(10) {
+    	left: 81.9vw;
+    }
+    .sensor:nth-of-type(11) {
+    	left: 91vw;
+    }
+
+    .pano {
+    	width: 200vw;
+    	height: 100vh;
+    	background-image: url('http://salavaux.ch/222/samuel-zeller-103103-unsplash.jpg');
+    	background-size: cover;
+    	background-position: center;
+    	transform: translateX(-50vw);
+    	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+    }
+
+    .pano::before {
+    	content: '';
+    	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    }
+
+    .sensor:nth-of-type(1):hover ~ .pano {
+    	transform: translateX(0vw);
+    }
+    .sensor:nth-of-type(1):hover ~ .pano::after {
+    	transform: translateX(-5vw);
+    }
+    .sensor:nth-of-type(2):hover ~ .pano {
+    	transform: translateX(-10vw);
+    }
+    .sensor:nth-of-type(3):hover ~ .pano {
+    	transform: translateX(-20vw);
+    }
+    .sensor:nth-of-type(4):hover ~ .pano {
+    	transform: translateX(-30vw);
+    }
+    .sensor:nth-of-type(5):hover ~ .pano {
+    	transform: translateX(-40vw);
+    }
+    .sensor:nth-of-type(6):hover ~ .pano {
+    	transform: translateX(-50vw);
+    }
+    .sensor:nth-of-type(7):hover ~ .pano {
+    	transform: translateX(-60vw);
+    }    .sensor:nth-of-type(8):hover ~ .pano {
+    	transform: translateX(-70vw);
+    }
+    .sensor:nth-of-type(9):hover ~ .pano {
+    	transform: translateX(-80vw);
+    }
+    .sensor:nth-of-type(10):hover ~ .pano {
+    	transform: translateX(-90vw);
+    }
+    .sensor:nth-of-type(11):hover ~ .pano {
+    	transform: translateX(-100vw);
+    }
+    </style>
+
+    <div class="wrapper">
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="sensor"></div>
+    	<div class="pano"></div>
+    </div>
+
+    
+  </body>
+</html>
